@@ -11,6 +11,7 @@ class Facebook_Simple_login{
 
   function find_composer(){
       $composer_path = $this->find_root_directory().'/vendor/autoload.php';
+
       if(!file_exists($composer_path)){
         $this->install_composer();
       }
@@ -25,6 +26,7 @@ class Facebook_Simple_login{
       } else{
         $root = ABSPATH;
       }
+
       return $root;
     }
 
@@ -38,30 +40,43 @@ class Facebook_Simple_login{
   private function  install_composer(){
       if(!file_exists($this->find_root_directory().'/composer.json')){
         $composer_json_file = fopen($this->find_root_directory().'/composer.json','w+');
-        $content = json_encode(array("autoload" => array("psr-4"=> array("Worpress\\" => $this->find_root_directory())),"require" => array()));
+        $content = json_encode(array("autoload" => array("psr-4"=> array("Worpress\\" => $this->find_root_directory())),"require" => array()),JSON_FORCE_OBJECT);
 
-        /*'{ "autoload":{
+      /*  $content= '{ "autoload":{
             "psr-4":{
-              "Wordpress\\":'.$this->find_root_directory().
-            '}
+              "Wordpress\\": "'.$this->find_root_directory().
+            '"}
           },
           "require":{
           }
-
-        }'*/
+        }';*/
         fwrite($composer_json_file, $content);
         fclose($composer_json_file);
 
       }
+      //copy('https://getcomposer.org/composer-stable.phar', $this->find_root_directory().'/composer.phar');
       copy('https://getcomposer.org/installer', $this->find_root_directory().'/composer-setup.php');
 
-      if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a')
+      if (hash_file('sha384', $this->find_root_directory().'/composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a')
       {
         echo 'Installer verified';
       } else { echo 'Installer corrupt';
         unlink('composer-setup.php');
-       }
-    exec('php '.find_root_directory().'/composer-setup.php');
+      }
+      try{
+        //system('php '.$this->find_root_directory().'/composer.phar --install',$value);
+        exec('php '.$this->find_root_directory().'/composer-setup.php');
+        //$reflog =  fopen(dirname( __FILE__ )."/reflog.text",'w+');
+        //fwrite($reflog,$value);
+        //fclose($reflog);
+      }
+      catch(Exception $e){
+        echo $e->getMessage();
+        $errorlog =  fopen(dirname( __FILE__ )."/errorlog.text",'w+');
+        fwrite($errorlog,$e);
+        fclose($errorlog);
+      }
+
     }
 
     private function  install_facebook_graph(){

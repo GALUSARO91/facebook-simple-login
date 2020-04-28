@@ -4,7 +4,8 @@
  */
  function plugin_init(){
  include_once dirname( __FILE__ ) . '/class-facebook-simple-login.php';
- register_activation_hook( __FILE__, array( 'Facebook_Simple_login','__construct' ) );
+ $fb_login = new Facebook_simple_login;
+ register_activation_hook( __FILE__, array( $fb_login,$fb_login->__construct ) );
 }
 
 try{
