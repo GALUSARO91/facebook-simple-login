@@ -3,7 +3,7 @@
  * Plugin Name: Facebook simple login
  */
  function plugin_init(){
- include_once dirname( __FILE__ ) . '/class-facebook-simple-login.php';
+ require_once dirname( __FILE__ ) . '/class-facebook-simple-login.php';
  $fb_login = new Facebook_simple_login;
  register_activation_hook( __FILE__, array( $fb_login,$fb_login->__construct ) );
 }

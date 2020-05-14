@@ -1,11 +1,13 @@
 <?php
 //namespace Wordpress\fb_login
+require_once 'facebook-menu-layout.php';//dependencias para el menu
+//require_once 'test-menu.php';
 
 class Facebook_Simple_login{
 
   function __construct(){
-      $this->load_dependences();
-      $this->create_menu();
+      //$this->load_dependences();
+      $this->create_menu(); //crear menu
 
     }
 
@@ -15,8 +17,6 @@ class Facebook_Simple_login{
       if(!file_exists($composer_path)){
         $this->install_composer();
       }
-
-
     }
 
   function find_root_directory(){
@@ -41,15 +41,6 @@ class Facebook_Simple_login{
       if(!file_exists($this->find_root_directory().'/composer.json')){
         $composer_json_file = fopen($this->find_root_directory().'/composer.json','w+');
         $content = json_encode(array("autoload" => array("psr-4"=> array("Worpress\\" => $this->find_root_directory())),"require" => array()),JSON_FORCE_OBJECT);
-
-      /*  $content= '{ "autoload":{
-            "psr-4":{
-              "Wordpress\\": "'.$this->find_root_directory().
-            '"}
-          },
-          "require":{
-          }
-        }';*/
         fwrite($composer_json_file, $content);
         fclose($composer_json_file);
 
@@ -59,22 +50,22 @@ class Facebook_Simple_login{
 
       if (hash_file('sha384', $this->find_root_directory().'/composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a')
       {
-        echo 'Installer verified';
-      } else { echo 'Installer corrupt';
-        unlink('composer-setup.php');
+        $this->write_ref_log('Installer verified');
+      } else {
+        $this->write_error_log('Installer corrupt');
+
+        unlink($this->find_root_directory().'/composer-setup.php');
       }
       try{
         //system('php '.$this->find_root_directory().'/composer.phar --install',$value);
-        exec('php '.$this->find_root_directory().'/composer-setup.php');
-        //$reflog =  fopen(dirname( __FILE__ )."/reflog.text",'w+');
-        //fwrite($reflog,$value);
-        //fclose($reflog);
+        system('sudo php '.$this->find_root_directory().'/composer-setup.php',$test1);
+        $this->write_ref_log($test1);
+        system('php '.$this->find_root_directory().'/composer.phar install',$test2);
+        $this->write_ref_log($test2);
       }
       catch(Exception $e){
-        echo $e->getMessage();
-        $errorlog =  fopen(dirname( __FILE__ )."/errorlog.text",'w+');
-        fwrite($errorlog,$e);
-        fclose($errorlog);
+        $error_message = $e->getMessage();
+        $this->write_error_log($error_message);
       }
 
     }
@@ -89,6 +80,30 @@ class Facebook_Simple_login{
     }
 
   function  create_menu(){
-      //TODO
+    function facebook_login_option_page() {
+      add_menu_page(
+          'Facebook Simple Login',// Page title
+          'Facebook Simple Login',// Menu title
+          'manage_options',//capabilities
+          'facebook-simple-login',//menu slug
+          'facebook_login_options_page_html',//function to display info
+          '',
+          20
+        );
+      }
+    add_action( 'admin_menu', 'facebook_login_option_page' );
+  
     }
+
+  private function write_ref_log($message){
+    $reflog =  fopen(dirname( __FILE__ )."/reflog.text",'w+');
+    fwrite($reflog,'[ '.date(DATE_RFC1123).'] '.$message);
+    fclose($reflog);
+  }
+
+  private function write_error_log($error_message){
+    $errorlog =  fopen(dirname( __FILE__ )."/errorlog.text",'w+');
+    fwrite($errorlog,'[ '.date(DATE_RFC1123).'] '.$error_message);
+    fclose($errorlog);
+  }
 }
