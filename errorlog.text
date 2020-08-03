@@ -1,0 +1,64 @@
+[Sun, 19 Jul 2020 17:36:19 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Sun, 19 Jul 2020 17:38:16 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Sun, 19 Jul 2020 17:38:45 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Sun, 19 Jul 2020 17:40:58 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Sun, 19 Jul 2020 17:43:12 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Mon, 20 Jul 2020 01:25:49 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Mon, 20 Jul 2020 01:34:14 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Mon, 20 Jul 2020 02:14:40 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Mon, 20 Jul 2020 02:22:25 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Mon, 20 Jul 2020 02:32:11 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Mon, 20 Jul 2020 02:33:45 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Mon, 20 Jul 2020 12:18:08 +0000] Bad request
+[Mon, 20 Jul 2020 15:52:31 +0000] Bad request
+[Mon, 20 Jul 2020 15:52:40 +0000] Bad request
+[Tue, 21 Jul 2020 17:05:02 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Tue, 21 Jul 2020 17:08:47 +0000] Bad request
+[Tue, 21 Jul 2020 17:15:28 +0000] Bad request
+[Tue, 21 Jul 2020 17:16:00 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Tue, 21 Jul 2020 17:31:34 +0000] Error validating client secret.
+[Tue, 21 Jul 2020 17:34:12 +0000] Error validating client secret.
+[Tue, 21 Jul 2020 17:34:50 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Tue, 21 Jul 2020 17:36:16 +0000] Bad request
+[Tue, 21 Jul 2020 17:39:19 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Tue, 21 Jul 2020 18:02:57 +0000] Error validating client secret.
+[Tue, 21 Jul 2020 18:06:18 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Tue, 21 Jul 2020 18:10:25 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Wed, 22 Jul 2020 19:18:02 +0000] Error validating client secret.
+[Wed, 22 Jul 2020 19:36:17 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Wed, 22 Jul 2020 19:37:06 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Wed, 22 Jul 2020 19:50:11 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Wed, 22 Jul 2020 19:56:01 +0000] Error validating verification code. Please make sure your redirect_uri is identical to the one you used in the OAuth dialog request
+[Wed, 22 Jul 2020 19:58:35 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Wed, 22 Jul 2020 20:02:10 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Wed, 22 Jul 2020 20:02:22 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Wed, 22 Jul 2020 20:22:14 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Wed, 22 Jul 2020 20:23:39 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Wed, 22 Jul 2020 23:13:21 +0000] Missing or invalid client id.
+[Wed, 22 Jul 2020 23:55:38 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Wed, 22 Jul 2020 23:55:44 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Wed, 22 Jul 2020 23:57:21 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 00:14:59 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Thu, 23 Jul 2020 00:16:19 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Thu, 23 Jul 2020 00:55:55 +0000] Bad request
+[Thu, 23 Jul 2020 00:55:55 +0000] Bad request
+[Thu, 23 Jul 2020 01:18:19 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 01:18:34 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 01:20:39 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 01:21:17 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 01:21:35 +0000] Bad request
+[Thu, 23 Jul 2020 01:21:39 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 01:26:48 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 01:29:03 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 02:08:44 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 03:24:15 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 03:24:18 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Thu, 23 Jul 2020 03:24:58 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Fri, 24 Jul 2020 16:30:29 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Fri, 24 Jul 2020 16:38:42 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Fri, 24 Jul 2020 17:34:26 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Fri, 24 Jul 2020 17:34:34 +0000] Cross-site request forgery validation failed. The "state" param from the URL and session do not match.
+[Wed, 29 Jul 2020 13:26:45 +0000] Bad request
+[Thu, 30 Jul 2020 00:13:54 +0000] Bad request
+[Fri, 31 Jul 2020 03:20:14 +0000] Bad request
+[Sun, 02 Aug 2020 17:16:32 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.

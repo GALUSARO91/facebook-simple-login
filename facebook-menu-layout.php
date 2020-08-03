@@ -1,4 +1,3 @@
-
 <?php
   function register_fb_settings (){
     /*$default = json_encode([
@@ -14,6 +13,7 @@
     register_setting('fblogin', 'fb_app_secret', ['type' => 'string','default' => '']);
     register_setting('fblogin', 'fb_login_page', ['type' => 'string','default' => '']);
     register_setting('fblogin', 'fb_signup_page', ['type' => 'string','default' => '']);
+    register_setting('fblogin', 'fb_my_account', ['type' => 'string','default' => '']);
     register_setting('fblogin', 'fb_install_composer', ['type' => 'boolean','default' => false ]);
     register_setting('fblogin', 'fb_install_fb_graph',['type' => 'boolean','default' => false]);
 
@@ -76,6 +76,18 @@
             'facebook_login_section', // identificador de la seccion a la que pertenece
             [
               'label_for' => 'fb_signup_page',
+              'input_type' => 'text'
+
+            ]);
+
+        add_settings_field(
+            'fb_my_account', //identificador del campo agregardo
+            'Pagina de cuenta de usuario', //nombre del campo que aparecera en el website
+            'get_input_text_field', //funcion que se ejecutara
+            'fblogin', //identificador de ajustes registrados en el plugin
+            'facebook_login_section', // identificador de la seccion a la que pertenece
+            [
+              'label_for' => 'fb_my_account',
               'input_type' => 'text'
 
             ]);
