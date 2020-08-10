@@ -1,6 +1,11 @@
 <?php
-//namespace Wordpress\fb_login
-require_once 'facebook-menu-layout.php';//dependencias para el menu
+/*
+
+
+*/
+require_once 'facebook-menu-layout.php'; //Menu dependences
+
+if(!class_exists( 'Facebook_Simple_Login' )){
 
 class Facebook_Simple_Login{
 
@@ -97,4 +102,5 @@ class Facebook_Simple_Login{
   }
 
 
+}
 }
