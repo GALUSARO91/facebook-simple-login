@@ -18,9 +18,9 @@ You may download this poject straight to your ``` /wp-content/plugins/facebook-s
 
 ## Usage
 
-*First make sure you have your facebook app ready [https://developers.facebook.com/]
-*Install the plugin on your wordpress plugin folder
-*Activate the plugin and provide info plugin is requesting.
+* First make sure you have your facebook app ready [https://developers.facebook.com/]
+* Install the plugin on your wordpress plugin folder
+* Activate the plugin and provide info plugin is requesting.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
