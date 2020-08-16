@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name:       Facebook Simple Login
- * Plugin URI:        Pending
+ * Plugin URI:        https://github.com/GALUSARO91/facebook-simple-login
  * Description:       Use it to create a passwordless simple alternative for user to login to wordpress. Make user log in with just a click.
  * Version:           1.0.0
  * Requires at least: Pending
