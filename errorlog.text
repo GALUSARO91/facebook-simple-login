@@ -62,3 +62,5 @@
 [Thu, 30 Jul 2020 00:13:54 +0000] Bad request
 [Fri, 31 Jul 2020 03:20:14 +0000] Bad request
 [Sun, 02 Aug 2020 17:16:32 +0000] Cross-site request forgery validation failed. Required param "state" missing from persistent data.
+[Wed, 12 Aug 2020 05:58:44 +0000] Bad request
+[Thu, 13 Aug 2020 17:56:40 +0000] Bad request

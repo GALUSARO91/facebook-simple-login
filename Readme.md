@@ -1,6 +1,6 @@
-# Facebook Simple Login for Wordpress
+# Simple Login with FB for Wordpress
 
-Facebook simple login is plugin that helps you to create a link in your nav bar, so users can sign in
+Simple Login with FB is plugin that helps you to create a link in your nav bar, so users can sign in
 to Wordpress without the need for a password.
 
 
@@ -14,7 +14,7 @@ to Wordpress without the need for a password.
 
 ## Installation
 
-You may download this poject straight to your ``` /wp-content/plugins/facebook-simple-login ``` directory (later on we will have this project on wordpress plugin system).
+You may download this poject straight to your ``` /wp-content/plugins/simple-login-with-fb ``` directory (later on we will have this project on wordpress plugin system).
 
 ## Usage
 
