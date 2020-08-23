@@ -28,4 +28,16 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
+
+Simple Login with FB is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+any later version.
+
+Simple Login with FB is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Simple Login with FB. If not, see [GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)

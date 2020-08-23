@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name:       Simple Login with FB
- * Plugin URI:        Pending
+ * Plugin URI:        https://github.com/GALUSARO91/simple-login-with-fb
  * Description:       Use it to create a passwordless simple alternative for user to login to wordpress. Make user log in with just a click.
  * Version:           1.0.0
  * Requires at least: Pending
@@ -9,7 +9,7 @@
  * Author:            Luis Gabriel Rodriguez Sandino.
  * Author URI:        https://www.facebook.com/Luis-script-kiddie
  * License:           GPL v2
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License URI:       https://github.com/GALUSARO91/simple-login-with-fb
 
   Simple Login with FB is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@
   GNU General Public License for more details.
 
   You should have received a copy of the GNU General Public License
-  along with Facebook Simple Login. If not, see.
+  along with Simple Login with FB. If not, see http://www.gnu.org/licenses/gpl-2.0.txt.
 */
 function plugin_init(){
   require_once dirname( __FILE__ ) . '/class-simple-login-with-fb.php';
