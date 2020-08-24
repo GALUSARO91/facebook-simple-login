@@ -4,13 +4,14 @@
  * Plugin URI:        https://github.com/GALUSARO91/simple-login-with-fb
  * Description:       Use it to create a passwordless simple alternative for user to login to wordpress. Make user log in with just a click.
  * Version:           1.0.0
- * Requires at least: Pending
- * Requires PHP:      Pending
+ * Requires at least: 4.8
+ * Requires PHP:      5.3
  * Author:            Luis Gabriel Rodriguez Sandino.
  * Author URI:        https://www.facebook.com/Luis-script-kiddie
- * License:           GPL v2
- * License URI:       https://github.com/GALUSARO91/simple-login-with-fb
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://github.com/GALUSARO91/simple-login-with-fb/blob/master/LICENSE.txt
 
+  Copyright (C) 2020 Luis Gabriel Rodriguez Sandino.
   Simple Login with FB is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 2 of the License, or
