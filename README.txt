@@ -4,7 +4,7 @@ Donate link: https://www.facebook.com/Luis-script-kiddie
 Tags: 1.0.0
 Stable tag: 1.0.0
 Requires at least: 4.8
-Tested up to: 5.4
+Tested up to: 5.5
 Requires PHP: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

@@ -3,6 +3,9 @@
 
 
 */
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 require_once 'menu-layout.php'; //Menu dependences
 
 if(!class_exists( 'Simple_Login_With_Social_Media' )){
@@ -14,16 +17,6 @@ class Simple_Login_With_Social_Media{
         register_activation_hook( __FILE__, array('class-simple-login-with-social-media','create_menu'));
     }
 
-  function find_root_directory(){
-      if(!ABSPATH){
-        $_SERVER = $GLOBALS['_SERVER'];
-        $root = $_SERVER['DOCUMENT_ROOT'];
-      } else{
-        $root = ABSPATH;
-      }
-      return $root;
-    }
-
 
   function  create_menu(){
     function facebook_login_option_page() {
@@ -32,7 +25,7 @@ class Simple_Login_With_Social_Media{
           'Simple Login with Social Media',// Menu title
           'manage_options',//capabilities
           'simple-login-with-social-media',//menu slug
-          'facebook_login_options_page_html',//function to display info
+          'slwsm_login_options_page_html',//function to display info
           '',
           20
         );
@@ -43,7 +36,7 @@ class Simple_Login_With_Social_Media{
 
   function set_fb_callback($fb_app_id, $fb_app_secret, $fb_login_page){
     try{
-    require_once $this->find_root_directory().'vendor/autoload.php';
+    require_once ABSPATH .'vendor/autoload.php';
     if(!session_id()){
         session_start();
     }
@@ -86,8 +79,6 @@ class Simple_Login_With_Social_Media{
     fclose($reflog);
 
    }
-
-
 
 
   }

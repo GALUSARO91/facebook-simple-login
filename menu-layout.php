@@ -1,5 +1,7 @@
 <?php
-  function register_fb_settings (){
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+  function slwsm_register_settings (){
 
     register_setting('fblogin', 'fb_api_id',['type' => 'string','default' => '']);
     register_setting('fblogin', 'fb_app_secret', ['type' => 'string','default' => '']);
@@ -8,13 +10,13 @@
     add_settings_section(
       'facebook_login_section', // identificador de la seccion a la que pertenece
       'Facebook App Login info', //informacion que aparecera en el website
-      'facebook_login_sections_cb', // funcion para los encabezados
+      'slwsm_login_sections_cb', // funcion para los encabezados
       'fblogin'); //nombre de la pagina que se mostrara en el menu (slug)
 
     add_settings_field(
       'fb_api_id', //identificador del campo agregardo
       'Identificador de la API', //nombre del campo que aparecera en el website
-      'get_input_text_field', //funcion que se ejecutara
+      'slwsm_get_input_text_field', //funcion que se ejecutara
       'fblogin', //identificador de ajustes registrados en el plugin
       'facebook_login_section', // identificador de la seccion a la que pertenece
       [
@@ -25,7 +27,7 @@
       add_settings_field(
         'fb_app_secret', //identificador del campo agregardo
         'Token de acceso', //nombre del campo que aparecera en el website
-        'get_input_text_field', //funcion que se ejecutara
+        'slwsm_get_input_text_field', //funcion que se ejecutara
         'fblogin', //identificador de ajustes registrados en el plugin
         'facebook_login_section', // identificador de la seccion a la que pertenece
         [
@@ -37,7 +39,7 @@
         add_settings_field(
           'fb_login_page', //identificador del campo agregardo
           'Pagina de inicio de sesion', //nombre del campo que aparecera en el website
-          'get_input_text_field', //funcion que se ejecutara
+          'slwsm_get_input_text_field', //funcion que se ejecutara
           'fblogin', //identificador de ajustes registrados en el plugin
           'facebook_login_section', // identificador de la seccion a la que pertenece
           [
@@ -48,11 +50,11 @@
 
   }
 
-  add_action('admin_init', 'register_fb_settings');
+  add_action('admin_init', 'slwsm_register_settings');
 
 
 
-  function get_input_text_field ($args){
+  function slwsm_get_input_text_field ($args){
       ?>
         <?php
           $option = get_option($args['label_for']);
@@ -70,14 +72,14 @@
     }
 
 
-  function facebook_login_sections_cb (){
+  function slwsm_login_sections_cb (){
     echo '<p><i>
         Please fill up fields below with required info.
      </i></p>';
 
   }
 
-  function facebook_login_dependences_cb (){
+  function slwsm_login_dependences_cb (){
     echo '<p><i>
         If you are able to install the dependences on you own, you can leave this unchecked.
      </i></p>';
@@ -85,7 +87,7 @@
 
 ?>
 <?php
-  function facebook_login_options_page_html() {
+  function slwsm_login_options_page_html() {
       ?>
       <div class="wrap">
         <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
@@ -95,7 +97,7 @@
           settings_fields('fblogin');
 
           do_settings_sections('fblogin');
-        
+
           submit_button('Save Settings');
           ?>
         </form>

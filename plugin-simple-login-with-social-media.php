@@ -25,14 +25,17 @@
   You should have received a copy of the GNU General Public License
   along with Simple Login with FB. If not, see http://www.gnu.org/licenses/gpl-2.0.txt.
 */
-function plugin_init(){
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+function slwsm_plugin_init(){
   require_once dirname( __FILE__ ) . '/class-simple-login-with-social-media.php';
   global $fb_login;
   $fb_login = new Simple_Login_With_Social_Media;
 
   }
 
-function write_login_link($fb_api_id,$fb_app_secret,$fb_login_page,$fb_login_page_old = null){
+function slwsm_write_login_link($fb_api_id,$fb_app_secret,$fb_login_page,$fb_login_page_old = null){
     $link_exist = false;
     $all_menus = wp_get_nav_menus();
     foreach($all_menus as $menu){
@@ -70,13 +73,13 @@ function write_login_link($fb_api_id,$fb_app_secret,$fb_login_page,$fb_login_pag
 
 }
 
-function load_login_link_in_header(){
+function slwsm_load_login_link_in_header(){
 
-    write_login_link(get_option('fb_api_id'),get_option('fb_app_secret'),get_option('fb_login_page'),get_option('fb_login_page'));
+    slwsm_write_login_link(get_option('fb_api_id'),get_option('fb_app_secret'),get_option('fb_login_page'),get_option('fb_login_page'));
 }
 
 
-function set_options($option_name,$old_value,$value){
+function slwsm_set_options($option_name,$old_value,$value){
 
     $options_set = [
         'fb_api_id' => '',
@@ -99,7 +102,7 @@ function set_options($option_name,$old_value,$value){
 
     if ($option_name == 'fb_login_page'){
 
-        write_login_link($options_set['fb_api_id'],$options_set['fb_app_secret'],$value,$old_value);
+        slwsm_write_login_link($options_set['fb_api_id'],$options_set['fb_app_secret'],$value,$old_value);
         $origen = dirname(__FILE__).'/'.str_replace('_','-',$option_name).'.php';
         $destino = get_stylesheet_directory().'/page-'.$value.'.php';
         copy($origen,$destino);
@@ -125,9 +128,9 @@ function set_options($option_name,$old_value,$value){
 
 try{
 
-  add_action( 'plugins_loaded', 'plugin_init' );
-  add_action('updated_option','set_options',10,3);
-  add_action('get_header','load_login_link_in_header');
+  add_action( 'plugins_loaded', 'slwsm_plugin_init' );
+  add_action('updated_option','slwsm_set_options',10,3);
+  add_action('get_header','slwsm_load_login_link_in_header');
 
 }
 
